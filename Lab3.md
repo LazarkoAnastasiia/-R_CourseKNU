@@ -48,13 +48,17 @@ my_ifelse(x, "==", 850)
 #removeNA вказує, чи видаляти NA значення. По замовчуванню він
 #дорівнює TRUE.
 
-columnmean <- function(x, removeNA=TRUE){ 
-  colMeans(x, na.rm=removeNA)}
-x <- matrix(c(8,9,12, NA, 5, 6, NA, NA, 8), nrow=3, ncol=3, byrow=TRUE)
+columnmean <- function(y, removeNA=TRUE){
+  res<-vector()
+  for (col in 1:ncol(y)){
+    res[col]<-(mean(y[,col], na.rm=removeNA))
+  }
+  return(res)
+}  
+y <- matrix(c(8,9,12, NA, 5, 6, NA, NA, 8), nrow=3, ncol=3, byrow=TRUE)
+columnmean(y)
 
-columnmean(x)
-
-columnmean (x, FALSE)
+columnmean (y, FALSE)
 
 
 
