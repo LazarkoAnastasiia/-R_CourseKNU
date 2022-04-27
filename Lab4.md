@@ -92,7 +92,7 @@ mean(data$Temp[data$Month == 6])
 ```
 #   9. Яке максимальне значення «Ozone» для травня («Month» дорівнює 5)?
 ```r
-max(tbl$Ozone[tbl$Month ==5], na.rm = TRUE)
+max(data$Ozone[data$Month ==5], na.rm = TRUE)
 
 [1] 115
 ```
