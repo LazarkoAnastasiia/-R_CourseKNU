@@ -59,8 +59,7 @@ mean (data$Ozone, na.rm = TRUE)
 
 [1] 42.12931
 ```
-# 7. Виведіть частину набору даних (subset) зі значенням «Ozone» > 31 та
-# «Temp» > 90. Яке середнє (mean) значень «Solar.R» в цьому наборі даних (subset)?
+# 7. Виведіть частину набору даних (subset) зі значенням «Ozone» > 31 та «Temp» > 90. Яке середнє (mean) значень «Solar.R» в цьому наборі даних (subset)?
 ```r
 data1 <- subset(data, data$Ozone > 31 & data$Temp > 90)
 data1
